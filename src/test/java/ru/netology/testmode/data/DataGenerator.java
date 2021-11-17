@@ -43,6 +43,15 @@ public class DataGenerator {
                 .then()
                 .statusCode(200);
     }
+    public static String getRandomLogin() {
+        String login = faker.name().firstName();
+        return login;
+    }
+
+    public static String getRandomPassword() {
+        String password = faker.internet().password();
+        return password;
+    }
 
     public Registration getActiveUser(){
         Registration activeUser = new Registration(faker.name().firstName(), faker.internet().password(), "active");
